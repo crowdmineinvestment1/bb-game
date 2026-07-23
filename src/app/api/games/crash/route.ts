@@ -233,7 +233,7 @@ export async function POST(req: NextRequest) {
             // Luck Win user: auto-cashout with guaranteed profit if they didn't cash out in time
             if (isSureWin || MockDB.isSureWinUser(bet.userId)) {
               bet.cashedOut = true;
-              bet.cashOutMultiplier = Math.max(1.25, Math.min(1.5, currentGame.crashPoint));
+              bet.cashOutMultiplier = Math.max(1.25, Math.min(1.5, currentGame?.crashPoint || 1.25));
               bet.profit = bet.amount * 0.25;
               MockDB.updateWalletBalance(bet.userId, bet.currency || 'BTC', bet.profit);
             } else {
