@@ -34,7 +34,7 @@ export default function AdminDashboard() {
   const [sureWinSuccess, setSureWinSuccess] = useState('');
 
   // Support chat state
-  const [supportChats, setSupportChats] = useState<{ [username: string]: any[] }>({});
+  const [supportChats, setSupportChats] = useState<Record<string, { user_id: string; username: string; messages: any[] }>>({});
   const [selectedChatUser, setSelectedChatUser] = useState<string | null>(null);
   const [supportReply, setSupportReply] = useState('');
   const chatEndRef = React.useRef<HTMLDivElement>(null);
