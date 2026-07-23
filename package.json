@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "pages:build": "npx @cloudflare/next-on-pages"
   },
   "dependencies": {
     "@emoji-mart/data": "^1.1.2",
