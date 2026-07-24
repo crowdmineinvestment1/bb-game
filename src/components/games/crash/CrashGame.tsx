@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import CrashGraph from './CrashGraph';
+import useWalletStore from '@/store/walletStore';
 
 type GamePhase = 'waiting' | 'running' | 'crashed';
 
