@@ -53,7 +53,7 @@ export const LiveBetFeed: React.FC = () => {
         ) : (
           bets.map((bet) => {
             const isWin = (bet.multiplier || 0) > 0 && (bet.payout || 0) >= bet.amount;
-            const username = (bet as any).users?.username || bet.username || 'Anonymous';
+            const username = (bet as any).users?.username || (bet as any).username || 'Anonymous';
 
             return (
               <div 
